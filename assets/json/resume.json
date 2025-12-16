@@ -5,32 +5,32 @@
     "image": "",
     "email": "aaguirre@mondragon.edu",
     "phone": "",
-    "url": "https://alshedivat.github.io/al-folio/",
+    "url": "https://www.linkedin.com/in/aagirre/",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Goiru Kalea 2",
+      "postalCode": "20500",
+      "city": "Arrasate",
+      "countryCode": "",
+      "region": "Basque Country"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Linkedin",
+        "username": "Aitor Agirre",
+        "url": "https://www.linkedin.com/in/aagirre/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Mondragon Goi Eskola Politeknikoa - University of Mondragon",
+      "position": "Researcher and Professor",
+      "url": "https://research.mondragon.edu/investigadores/738265/detalle?lang=en",
+      "startDate": "2017",
+      "endDate": "",
+      "summary": "",
+      "highlights": ["AI, Data Analysis, SciML, Explainability, Probabilistic AI"]
     }
   ],
   "volunteer": [
