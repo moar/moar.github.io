@@ -6,7 +6,7 @@
     "email": "aaguirre@mondragon.edu",
     "phone": "",
     "url": "https://www.linkedin.com/in/aagirre/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "summary": "Researcher and lecturer, Trustorthy AI",
     "location": {
       "address": "Goiru Kalea 2",
       "postalCode": "20500",
@@ -32,19 +32,7 @@
       "summary": "",
       "highlights": ["AI, Data Analysis, SciML, Explainability, Probabilistic AI"]
     }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
+  ],  
   "education": [
     {
       "institution": "University of Zurich, Zurich, Switzerland",
