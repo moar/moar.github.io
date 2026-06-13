@@ -2,7 +2,6 @@
 layout: book
 title: Causal AI
 author: Robert Osazuwa Ness
-cover: assets/img/book_covers/causal_ai.jpg
 isbn: 9781633439917
 year: 2025
 publisher: Manning Publications

@@ -2,7 +2,6 @@
 layout: book
 title: Regression and Other Stories
 author: Andrew Gelman, Jennifer Hill and Aki Vehtari
-cover: assets/img/book_covers/regression_other_stories.jpg
 isbn: 9781107676510
 year: 2020
 publisher: Cambridge University Press

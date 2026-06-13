@@ -2,7 +2,6 @@
 layout: book
 title: Data-Driven Science and Engineering
 author: Steven L. Brunton and J. Nathan Kutz
-cover: assets/img/book_covers/data_driven_science.jpg
 isbn: 9781108422093
 year: 2019
 publisher: Cambridge University Press
