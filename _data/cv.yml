@@ -2,96 +2,110 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Aitor Aguirre-Ortuzar
     - name: Date of Birth
-      value: 14th March 1879
+      value: 20th April 1985
     - name: Languages
-      value: English, German
+      value: Basque (native), Spanish (native), English (fluent)
+    - name: ORCID
+      value: <a href="https://orcid.org/0000-0002-7056-5344">0000-0002-7056-5344</a>
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD in Artificial Intelligence — Sistemas Interactivos Inteligentes de Ayuda al Aprendizaje de Destrezas Físicas
+      institution: TECNUN – Universidad de Navarra, San Sebastián, Spain
+      year: 2013
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - Supervisor&#58; Luis Matey Muñoz
+    - title: MSc in Applied Engineering (Ingenieritza aplikatua)
+      institution: TECNUN – Universidad de Navarra, San Sebastián, Spain
+      year: 2011
+    - title: BSc in Computer Engineering (Goi mailako Ingenieritza Informatikoa)
+      institution: Mondragon Unibertsitatea, Mondragon, Spain
+      year: 2009
+    - title: Technical Engineering in Computer Systems (Sistemen Informatikan Ingenieritza Teknikoa)
+      institution: Mondragon Unibertsitatea, Mondragon, Spain
+      year: 2006
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Professor and Researcher
+      institution: Mondragon Unibertsitatea – Faculty of Engineering (MGEP), Mondragon, Spain
+      year: 2017 - now
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - Member of the Intelligent Systems for Industrial Systems (SISI) research group.
+        - Research focused on Trustworthy AI&#58; SciML, probabilistic AI, and Explainable AI (XAI).
+        - Professor in Master's programmes in Data Analysis, Cybersecurity, and Smart Energy Systems.
+        - Coordinator of the Ulma Handling Systems – MGEP AI Chair.
+        - Representative for BDVA and ETAMI activities at the university.
+    - title: Software Engineer
+      institution: Guretruck, Spain
+      year: 2017
+    - title: Co-founder
+      institution: Eyelang, Spain
+      year: 2014 - 2018
+    - title: Researcher
+      institution: CEIT – Centro de Estudios e Investigaciones Técnicas de Gipuzkoa, San Sebastián, Spain
+      year: 2009 - 2013
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Selected Research Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: SHASAI – Secure Hardware and Software for AI systems
+      year: 2025 - 2029
+      description: European project on hardware and software security for AI systems.
+    - title: FEDIA – Federated Learning Vertical para IA
+      year: 2024 - 2026
+      description: Basque Government project on vertical federated learning for AI.
+    - title: MONDAI – Vigilancia Tecnológica e Informes Aprendizaje Federado e IA Generativa
+      year: 2024 - 2026
+      description: MCC project on technology watch for federated learning and generative AI.
+    - title: KMON – Kuantika MONDRAGON (PI)
+      year: 2023 - 2024
+      description: MCC project on quantum computing for AI algorithms.
+    - title: AIO – Adimenezko Industria Optimizazioa (PI)
+      year: 2022 - 2023
+      description: Industrial AI optimisation project funded by the Diputación Foral de Gipuzkoa.
+    - title: VALU3S – Verification and Validation of Automated Systems' Safety and Security
+      year: 2020 - 2023
+      description: European H2020 project on safety and security verification of automated systems.
+    - title: FATECO – Improvement of fatigue performance of automotive components
+      year: 2019 - 2023
+      description: European project on ecofriendly finishing operations for automotive parts.
 
-- title: Honors and Awards
+- title: Scientific Committees
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022 - now
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+        - Big Data Value Association (BDVA)
+
+- title: Other Merits
+  type: list
+  contents:
+    - Coordinator of the Ulma Handling Systems – MGEP AI Chair.
+    - University representative for BDVA (Big Data Value Association) and ETAMI activities.
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Trustworthy AI
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Scientific Machine Learning (SciML)
+        - Physics-Informed Neural Networks (PINNs)
+        - Uncertainty Quantification
+    - title: Explainable AI (XAI)
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Model interpretability
+        - SHAP, LIME and attribution methods
+    - title: Cybersecurity & AI
+      items:
+        - Federated Learning
+        - Post-Quantum Cryptography
+        - Industrial IoT Security
+    - title: Probabilistic Machine Learning
+      items:
+        - Bayesian Neural Networks
+        - Gaussian Processes

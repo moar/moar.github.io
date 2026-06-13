@@ -1,34 +1,35 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"zurutuza":
+  - firstname: ["Urko", "U.", "Urko Zurutuza"]
+    url: https://www.linkedin.com/in/urko-zurutuza-ortega/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"arana":
+  - firstname: ["Nestor", "N.", "Nestor Arana-Arexolaleiba"]
+    url: https://www.mondragon.edu/en
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"elguea-aguinaco":
+  - firstname: ["Íñigo", "I.", "Iñigo Elguea-Aguinaco", "Iñigo Elguea Aguinaco"]
+    url: https://www.mondragon.edu/en
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"lozano-rodero":
+  - firstname: ["Alberto", "A."]
+    url: https://www.mondragon.edu/en
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"matey":
+  - firstname: ["Luis M.", "L.", "Luis", "Luis M"]
+    url: https://www.tecnun.es
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"cernuda":
+  - firstname: ["Carlos", "C."]
+    url: https://www.mondragon.edu/en
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"laskurain":
+  - firstname: ["Unai", "U."]
+    url: https://www.mondragon.edu/en
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"muniategui":
+  - firstname: ["Ander", "A."]
+    url: https://www.mondragon.edu/en
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"izagirre-aizpitarte":
+  - firstname: ["Unai", "U."]
+    url: https://www.mondragon.edu/en
