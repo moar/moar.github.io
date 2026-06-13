@@ -1,9 +1,19 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"IEEE TLT":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4620076
+  color: "#00629b"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"KBS":
+  url: https://www.sciencedirect.com/journal/knowledge-based-systems
+  color: "#e87722"
 
-"Vision":
+"IJAMT":
+  url: https://www.springer.com/journal/170
+  color: "#c00"
+
+"JSS":
+  url: https://www.sciencedirect.com/journal/journal-of-systems-and-software
+  color: "#005f87"
+
+"Coatings":
+  url: https://www.mdpi.com/journal/coatings
   color: "#009f36"
