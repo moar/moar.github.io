@@ -2,11 +2,29 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Courses taught at Mondragon Unibertsitatea – Faculty of Engineering (MGEP).
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+## Master in Data Analysis, Cybersecurity and Cloud Computing (MACC)
 
-Organize your courses by years, topics, or universities, however you like!
+**Fundamentals of Machine Learning**
+Introduction to the core concepts of machine learning, covering supervised and unsupervised learning, model evaluation, and practical applications with Python.
+
+---
+
+## Master in Smart Industry and Energy (MSIE)
+
+**Machine Learning**
+Applied machine learning techniques for smart industry and energy systems, including regression, classification, clustering and time-series forecasting.
+
+**Optimization**
+Mathematical and algorithmic optimization methods applied to engineering problems, covering gradient-based methods, metaheuristics and industrial applications.
+
+---
+
+## Master in Applied Artificial Intelligence (MIA)
+
+**Physics-Informed Neural Networks (PINN) Workshop**
+Hands-on workshop on Scientific Machine Learning (SciML), covering the theory and implementation of Physics-Informed Neural Networks for solving differential equations and modelling physical systems with limited data.
