@@ -14,7 +14,7 @@ Introduction to the core concepts of machine learning, covering supervised and u
 
 ---
 
-## Master in Smart Industry and Energy (MSIE)
+## Master en Sistemas Inteligentes para la Energía (MSIE)
 
 **Machine Learning**
 Applied machine learning techniques for smart industry and energy systems, including regression, classification, clustering and time-series forecasting.
