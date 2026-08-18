@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "books-bayesian-methods-for-hackers",
+            },{id: "post-logic-tensor-networks-the-smokes-friends-cancer-example",
+        
+          title: "Logic Tensor Networks: the Smokes–Friends–Cancer example",
+        
+        description: "A hands-on walkthrough of the canonical Logic Tensor Networks example, showing how first-order logic axioms become a differentiable, trainable neural model.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/logic-tensor-networks-smokes-friends-cancer/";
+          
+        },
+      },{id: "books-bayesian-methods-for-hackers",
           title: 'Bayesian Methods for Hackers',
           description: "",
           section: "Books",handler: () => {
