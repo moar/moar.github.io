@@ -13,16 +13,16 @@ The [Logic Tensor Networks](https://github.com/logictensornetworks/logictensorne
 bridges symbolic reasoning and deep learning: you write down domain knowledge as **first-order logic
 axioms**, and the model learns tensor groundings that **satisfy** those axioms as well as possible.
 
-This notebook works through the canonical LTN example — a small social network where we know who smokes,
+This notebook works through the canonical LTN example, a small social network where we know who smokes,
 who is friends with whom, and (partially) who has cancer. Along the way it explains the ideas that make
-LTN tick:
+LTN work:
 
 - how symbols (people, predicates) are *grounded* as tensors and neural networks,
 - how fuzzy connectives replace Boolean logic,
 - how `Forall` and `Exists` become **fold (reduce) operations** over truth-value tensors,
 - and the LTN training loop: maximise satisfaction ↔ minimise `1 - sat`.
 
-The notebook interleaves the working code with short Q&A boxes answering the questions that naturally
+The notebook mixes the working code with short Q&A boxes answering the questions that naturally
 come up the first time you read LTN code (why embedding size 10? which fuzzy algebra? where do the
 `p` values come from?).
 
