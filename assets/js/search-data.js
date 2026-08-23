@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-logic-tensor-networks-the-smokes-friends-cancer-example",
+            },{id: "post-logic-tensor-networks-grounding-and-variables",
+        
+          title: "Logic Tensor Networks: grounding and variables",
+        
+        description: "The second LTN tutorial — how constants, variables, predicates and functions become tensors, and why variable broadcasting is the key to writing your own axioms.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/logic-tensor-networks-grounding-and-variables/";
+          
+        },
+      },{id: "post-logic-tensor-networks-the-smokes-friends-cancer-example",
         
           title: "Logic Tensor Networks: the Smokes–Friends–Cancer example",
         
