@@ -77,7 +77,14 @@ pagination:
 <p class="card-text">{{ post.description }}</p>
 
                     {% if post.external_source == blank %}
-                      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+                      {% comment %} Comprehension-based estimate for notebook/code posts: visible text at ~170 wpm, +0.4 min per code cell to step through, +1 min per figure. {% endcomment %}
+                      {% assign v = post.content | strip_html | number_of_words %}
+                      {% assign code_cells = post.content | split: 'input_area' | size | minus: 1 %}
+                      {% assign figures = post.content | split: '<img' | size | minus: 1 %}
+                      {% assign read_time = v | divided_by: 170.0 %}
+                      {% assign read_time = code_cells | times: 0.4 | plus: read_time %}
+                      {% assign read_time = figures | plus: read_time %}
+                      {% assign read_time = read_time | ceil %}
                     {% else %}
                       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
                     {% endif %}
@@ -112,7 +119,14 @@ pagination:
     {% for post in postlist %}
 
     {% if post.external_source == blank %}
-      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+      {% comment %} Comprehension-based estimate for notebook/code posts: visible text at ~170 wpm, +0.4 min per code cell to step through, +1 min per figure. {% endcomment %}
+      {% assign v = post.content | strip_html | number_of_words %}
+      {% assign code_cells = post.content | split: 'input_area' | size | minus: 1 %}
+      {% assign figures = post.content | split: '<img' | size | minus: 1 %}
+      {% assign read_time = v | divided_by: 170.0 %}
+      {% assign read_time = code_cells | times: 0.4 | plus: read_time %}
+      {% assign read_time = figures | plus: read_time %}
+      {% assign read_time = read_time | ceil %}
     {% else %}
       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
     {% endif %}
