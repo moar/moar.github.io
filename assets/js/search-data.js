@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-logic-tensor-networks-grounding-and-variables",
+            },{id: "post-logic-tensor-networks-knowledge-base-and-learning",
+        
+          title: "Logic Tensor Networks: knowledge base and learning",
+        
+        description: "The third LTN tutorial — building a complete knowledge base and training a semi-supervised classifier that labels 19 points from just two labels and one rule.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/logic-tensor-networks-knowledge-base-and-learning/";
+          
+        },
+      },{id: "post-logic-tensor-networks-grounding-and-variables",
         
           title: "Logic Tensor Networks: grounding and variables",
         
