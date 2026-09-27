@@ -55,8 +55,10 @@ The neuro-symbolic route flips the supervision around. Following the *indirect s
 the CNN is trained **from scratch with no digit labels at all**. The only supervision is the puzzle-level
 valid/invalid flag. The Sudoku rules, written as first-order logic axioms, provide the entire training
 signal: the network is pushed to assign digits so that valid puzzles satisfy the constraints and invalid
-ones violate them. The notebook below walks through the domains, variables, predicates and the two axioms
-that make this work.
+ones violate them. The notebook below walks through the domains, variables, predicates and axioms, and
+implements **two variants** of the idea: *indirect #1*, which requires every symbol to appear in each
+row/column/block (`∀d ∃x∈se: digit(x,d)`), and *indirect #2*, which instead imposes a pairwise structural
+constraint (cells sharing a sub-element must be predicted as different digits).
 
 {::nomarkdown}
 {% assign jupyter_path_2 = 'assets/jupyter/sudoku_part2_symbolic.ipynb' | relative_url %}
@@ -70,21 +72,23 @@ that make this work.
 
 ## Results & comparison
 
-| Metric (MNIST 4×4) | Pure DL (CNN baseline) | Neuro-symbolic (LTN, indirect #1) |
-|---|---|---|
-| Digit-level supervision | Yes — every cell labelled | **No** — none |
-| Labels required | A digit label on every cell | One validity flag per puzzle (valid/invalid) |
-| Training signal | Supervised digit classification (cross-entropy) | Logic-axiom satisfaction (`loss = 1 − sat`) |
-| Cell-level accuracy | *(from mlruns)* | — |
-| Puzzle-level accuracy | **851 / 900 = 0.946** | **815 / 900 = 0.906** |
+| Metric (MNIST 4×4) | Pure DL (CNN baseline) | LTN — indirect #1 | LTN — indirect #2 |
+|---|---|---|---|
+| Digit-level supervision | Yes — every cell labelled | **No** — none | **No** — none |
+| Labels required | A digit label on every cell | One validity flag per puzzle | One validity flag per puzzle |
+| Training signal | Supervised digit classification (cross-entropy) | Logic axioms — `∀d ∃x∈se: digit(x,d)` | Logic axioms — pairwise `SameSubElement ⇒ ¬Equal` |
+| Cell-level accuracy | *(from mlruns)* | — | — |
+| Puzzle-level accuracy | 851 / 900 = 0.946 | 815 / 900 = 0.906 | **868 / 900 = 0.964** |
 
-The headline result: the LTN reaches **≈90.6% puzzle-level accuracy** on the 4×4 MNIST boards *without ever
-seeing a single digit label* — just **4 points** below the fully-supervised CNN baseline's **94.6%**. It is
-told only whether each whole puzzle is valid or not; the Sudoku rules, encoded as first-order logic axioms,
-supply the rest of the training signal and force the CNN to discover the digits on its own.
+The headline result: **both** neuro-symbolic variants learn to read the digits *without ever seeing a single
+digit label* — they are told only whether each whole puzzle is valid, and the Sudoku rules (encoded as
+first-order logic axioms) supply the rest of the training signal. Indirect #1 lands at **90.6%**, about 4
+points under the fully-supervised CNN baseline (**94.6%**). Indirect #2 goes further: at **96.4%** it actually
+**beats the supervised baseline** — using a purely *structural* axiom (cells sharing a row, column, or block
+must be predicted as different digits) and, again, no digit labels at all.
 
-That is the core neuro-symbolic payoff: **symbolic knowledge substitutes for dense supervision.** For a ~4-point
-accuracy drop, the LTN removes the per-cell labelling requirement entirely: the baseline needs a label on
-every one of the 16 cells, while the LTN needs just one bit per board. When cell-level annotation is expensive
-or unavailable but the *rules* of the domain are known, that trade is often well worth making.
+That is the core neuro-symbolic payoff, in its strongest form: **symbolic knowledge does not just substitute
+for dense supervision — here it outperforms it.** The CNN baseline needs a label on every one of the 16 cells;
+the LTN needs just one bit per board. When per-cell annotation is expensive or unavailable but the *rules* of
+the domain are known, encoding those rules can be both cheaper and better.
 

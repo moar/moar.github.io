@@ -35,6 +35,7 @@ jobs:
         with:
           branch: publications/new-from-portal
           delete-branch: true
+          assignees: ${{ github.repository_owner }} # notifies you by email when the PR opens
           add-paths: |
             _bibliography/papers.bib
             .github/publications_snapshot.json
