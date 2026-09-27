@@ -70,21 +70,21 @@ constraint (cells sharing a sub-element must be predicted as different digits).
 {% endif %}
 {:/nomarkdown}
 
-## Results & comparison
+## Results and comparison
+These are results obtained by all the three aproaches: pure CNN, symbolic approach 1 and symbolic approach 2.
 
 | Metric (MNIST 4×4) | Pure DL (CNN baseline) | LTN — indirect #1 | LTN — indirect #2 |
 |---|---|---|---|
-| Digit-level supervision | Yes — every cell labelled | **No** — none | **No** — none |
+| Digit-level supervision | Yes, every cell labelled | **No** — none | **No** — none |
 | Labels required | A digit label on every cell | One validity flag per puzzle | One validity flag per puzzle |
 | Training signal | Supervised digit classification (cross-entropy) | Logic axioms — `∀d ∃x∈se: digit(x,d)` | Logic axioms — pairwise `SameSubElement ⇒ ¬Equal` |
-| Cell-level accuracy | *(from mlruns)* | — | — |
 | Puzzle-level accuracy | 851 / 900 = 0.946 | 815 / 900 = 0.906 | **868 / 900 = 0.964** |
 
 The headline result: **both** neuro-symbolic variants learn to read the digits *without ever seeing a single
-digit label* — they are told only whether each whole puzzle is valid, and the Sudoku rules (encoded as
+digit label* , they are told only whether each whole puzzle is valid, and the Sudoku rules (encoded as
 first-order logic axioms) supply the rest of the training signal. Indirect #1 lands at **90.6%**, about 4
 points under the fully-supervised CNN baseline (**94.6%**). Indirect #2 goes further: at **96.4%** it actually
-**beats the supervised baseline** — using a purely *structural* axiom (cells sharing a row, column, or block
+**beats the supervised baseline** , using a purely structural axiom (cells sharing a row, column, or block
 must be predicted as different digits) and, again, no digit labels at all.
 
 That is the core neuro-symbolic payoff, in its strongest form: **symbolic knowledge does not just substitute
