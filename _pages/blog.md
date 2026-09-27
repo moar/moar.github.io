@@ -76,8 +76,11 @@ pagination:
 <h3 class="card-title text-lowercase">{{ post.title }}</h3>
 <p class="card-text">{{ post.description }}</p>
 
-                    {% if post.external_source == blank %}
-                      {% comment %} Comprehension-based estimate for notebook/code posts: visible text at ~170 wpm, +0.4 min per code cell to step through, +1 min per figure. {% endcomment %}
+                    {% comment %} Prefer an explicit read_time (front matter): embedded notebooks are not part of post.content in this listing, so the word-count formula below only sees the intro. {% endcomment %}
+                    {% if post.read_time %}
+                      {% assign read_time = post.read_time %}
+                    {% elsif post.external_source == blank %}
+                      {% comment %} Comprehension-based estimate: visible text at ~170 wpm, +0.4 min per code cell, +1 min per figure. {% endcomment %}
                       {% assign v = post.content | strip_html | number_of_words %}
                       {% assign code_cells = post.content | split: 'input_area' | size | minus: 1 %}
                       {% assign figures = post.content | split: '<img' | size | minus: 1 %}
@@ -118,8 +121,11 @@ pagination:
 
     {% for post in postlist %}
 
-    {% if post.external_source == blank %}
-      {% comment %} Comprehension-based estimate for notebook/code posts: visible text at ~170 wpm, +0.4 min per code cell to step through, +1 min per figure. {% endcomment %}
+    {% comment %} Prefer an explicit read_time (front matter): embedded notebooks are not part of post.content in this listing, so the word-count formula below only sees the intro. {% endcomment %}
+    {% if post.read_time %}
+      {% assign read_time = post.read_time %}
+    {% elsif post.external_source == blank %}
+      {% comment %} Comprehension-based estimate: visible text at ~170 wpm, +0.4 min per code cell, +1 min per figure. {% endcomment %}
       {% assign v = post.content | strip_html | number_of_words %}
       {% assign code_cells = post.content | split: 'input_area' | size | minus: 1 %}
       {% assign figures = post.content | split: '<img' | size | minus: 1 %}

@@ -2,6 +2,7 @@
 layout: post
 title: "Part 3: Logic Tensor Networks: knowledge base and learning"
 date: 2026-08-28 09:00:00+0100
+read_time: 27 # minutes; set explicitly because the embedded notebook is not counted by the listing's word-count formula
 description: The third LTN tutorial — building a complete knowledge base and training a semi-supervised classifier that labels 19 points from just two labels and one rule.
 tags: neuro-symbolic-ai logic-tensor-networks jupyter machine-learning
 categories: neuro-symbolic

@@ -2,6 +2,7 @@
 layout: post
 title: "Part 2: Logic Tensor Networks: grounding and variables"
 date: 2026-08-23 09:00:00+0100
+read_time: 26 # minutes; set explicitly because the embedded notebook is not counted by the listing's word-count formula
 description: The second LTN tutorial — how constants, variables, predicates and functions become tensors, and why variable broadcasting is the key to writing your own axioms.
 tags: neuro-symbolic-ai logic-tensor-networks jupyter machine-learning
 categories: neuro-symbolic
