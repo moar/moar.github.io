@@ -1,0 +1,55 @@
+name: Check for new publications
+
+# Runs monthly against the Mondragon research portal profile and, if a new
+# publication appears, opens a PR adding a draft BibTeX entry to papers.bib.
+# See .github/scripts/check_publications.py.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of every month
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check portal for new publications
+        id: check
+        run: python .github/scripts/check_publications.py
+
+      - name: Open pull request for new publications
+        if: steps.check.outputs.new_count != '0'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: publications/new-from-portal
+          delete-branch: true
+          add-paths: |
+            _bibliography/papers.bib
+            .github/publications_snapshot.json
+          commit-message: "chore: add draft bib entries for new publication(s)"
+          title: "New publication(s) detected on research.mondragon.edu"
+          body: |
+            The monthly publications watcher found new entries on your
+            [research portal profile](https://research.mondragon.edu/investigadores/738265/publicaciones):
+
+            ${{ steps.check.outputs.new_titles }}
+
+            Draft BibTeX entries were appended to `_bibliography/papers.bib` and the
+            snapshot was updated.
+
+            ⚠️ **Please review before merging** — the drafts guess the entry as
+            `@article` with `author={Aguirre-Ortuzar, A. and others}`. Fix the author
+            list, the entry type (`@article` / `@inproceedings` / `@inbook`), the
+            citation key, and confirm the DOI.

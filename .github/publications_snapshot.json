@@ -1,0 +1,111 @@
+{
+  "seen_ids": [
+    "6a24a9287c4c5464f33ae0aa",
+    "69b611ad7b66766ff3dbf803",
+    "6a81a0f6926b1d60e686e927",
+    "68fd599e5170e849fda93e31",
+    "67fbe26d2308cf3c390f8f03",
+    "6772432d2feafa4dfe15a7f0",
+    "69942195b365c50b0cf29377",
+    "66dd3fbf1374e43438bb1e2b",
+    "672e0476dae88459a5e3aeb8",
+    "5fefc0355ef7443267ee97eb",
+    "5fefc0365ef7443267ee97f9",
+    "5fefc0455ef7443267ee9905",
+    "5f1cdcd829995265e44d6030",
+    "5f1cda8329995265e44d3b39",
+    "5f1cda0729995265e44d325d"
+  ],
+  "publications": [
+    {
+      "id": "6a24a9287c4c5464f33ae0aa",
+      "title": "A Probabilistic Physics-Aware Battery Health Management Approach for Inspection Drone Operations",
+      "venue": "Engineering Asset Management Review (Springer Science and Business Media Deutschland GmbH), pp. 243-267",
+      "year": "2026"
+    },
+    {
+      "id": "69b611ad7b66766ff3dbf803",
+      "title": "Ensemble modeling of surface roughness in the cryogenic LN2 grinding process",
+      "venue": "International Journal of Advanced Manufacturing Technology, Vol. 143, Núm. 7-8, pp. 4131-4148",
+      "year": "2026"
+    },
+    {
+      "id": "6a81a0f6926b1d60e686e927",
+      "title": "Fuzzy logic-driven reinforcement learning and force field-based tunnel effect for assist-as-needed impedance modulation in upper-limb human-robot interaction",
+      "venue": "Neural Computing and Applications, Vol. 38, Núm. 15",
+      "year": "2026"
+    },
+    {
+      "id": "68fd599e5170e849fda93e31",
+      "title": "Novel framework for automated testing of ill-defined human–robot interaction environments",
+      "venue": "Journal of Systems and Software, Vol. 231",
+      "year": "2026"
+    },
+    {
+      "id": "67fbe26d2308cf3c390f8f03",
+      "title": "Laser Metal Deposition (LMD) Process Monitoring: From 3D Visualization of Sensor Data Towards Anomaly Detection",
+      "venue": "Lecture Notes in Mechanical Engineering",
+      "year": "2025"
+    },
+    {
+      "id": "6772432d2feafa4dfe15a7f0",
+      "title": "Novel automated interactive reinforcement learning framework with a constraint-based supervisor for procedural tasks",
+      "venue": "Knowledge-Based Systems, Vol. 309",
+      "year": "2025"
+    },
+    {
+      "id": "69942195b365c50b0cf29377",
+      "title": "Privacy-Preserving Feature Valuation in Vertical Federated Learning Using Shapley-CMI and PSI Permutation",
+      "venue": "2025 3rd International Conference on Federated Learning Technologies and Applications (FLTA)",
+      "year": "2025"
+    },
+    {
+      "id": "66dd3fbf1374e43438bb1e2b",
+      "title": "Data-Driven Optimization of Plasma Electrolytic Oxidation (PEO) Coatings with Explainable Artificial Intelligence Insights",
+      "venue": "Coatings, Vol. 14, Núm. 8",
+      "year": "2024"
+    },
+    {
+      "id": "672e0476dae88459a5e3aeb8",
+      "title": "Generalized SMOTE: A universal generation oversampling technique for all data types in imbalanced learning",
+      "venue": "XIX Conferencia de la Asociación Española para la Inteligencia Artificial CAEPIA 2021. 22-24, septiembre, 2021. Málaga",
+      "year": "2021"
+    },
+    {
+      "id": "5fefc0355ef7443267ee97eb",
+      "title": "ADAPT: An Automatic Diagnosis of Activity and Processes in auTomation environments",
+      "venue": "IEEE International Conference on Emerging Technologies and Factory Automation, ETFA",
+      "year": "2020"
+    },
+    {
+      "id": "5fefc0365ef7443267ee97f9",
+      "title": "Critical Analysis of the Suitability of Surrogate Models for Finite Element Method Application in Catalog-Based Suspension Bushing Design",
+      "venue": "IEEE International Conference on Emerging Technologies and Factory Automation, ETFA",
+      "year": "2020"
+    },
+    {
+      "id": "5fefc0455ef7443267ee9905",
+      "title": "Analysis of task execution in a data visualisation interface and its influence on individual performance",
+      "venue": "ACM International Conference Proceeding Series",
+      "year": "2019"
+    },
+    {
+      "id": "5f1cdcd829995265e44d6030",
+      "title": "Decision making in industry 4.0 scenarios supported by imbalanced data classification",
+      "venue": "Studies in Computational Intelligence (Springer Verlag), pp. 121-134",
+      "year": "2018"
+    },
+    {
+      "id": "5f1cda8329995265e44d3b39",
+      "title": "A novel approach to diagnosing motor skills",
+      "venue": "IEEE Transactions on Learning Technologies, Vol. 7, Núm. 4, pp. 304-318",
+      "year": "2014"
+    },
+    {
+      "id": "5f1cda0729995265e44d325d",
+      "title": "OLYMPUS: An intelligent interactive learning platform for procedural tasks",
+      "venue": "GRAPP 2012 IVAPP 2012 - Proceedings of the International Conference on Computer Graphics Theory and Applications and International Conference on Information Visualization Theory and Applications",
+      "year": "2012"
+    }
+  ]
+}
