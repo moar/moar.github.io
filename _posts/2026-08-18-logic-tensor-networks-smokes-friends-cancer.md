@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Logic Tensor Networks: the Smokes–Friends–Cancer example"
+title: "Part 1: Logic Tensor Networks: the Smokes–Friends–Cancer example"
 date: 2026-08-18 09:00:00+0100
 description: A hands-on walkthrough of the canonical Logic Tensor Networks example, showing how first-order logic axioms become a differentiable, trainable neural model.
 tags: neuro-symbolic-ai logic-tensor-networks jupyter machine-learning

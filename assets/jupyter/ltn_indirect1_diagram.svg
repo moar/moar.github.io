@@ -1,0 +1,105 @@
+<svg viewBox="0 0 860 580" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif" font-size="13">
+  <defs>
+    <marker id="arr"        markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#666"/></marker>
+    <marker id="arr-blue"   markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#5b8dee"/></marker>
+    <marker id="arr-green"  markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#3aaa6e"/></marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#e07b39"/></marker>
+    <marker id="arr-red"    markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#cc3333"/></marker>
+  </defs>
+
+  <rect width="860" height="580" fill="white"/>
+
+  <!-- COLUMN 1 — Variables -->
+  <text x="90" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#888">VARIABLES</text>
+
+  <rect x="20" y="60" width="140" height="70" rx="8" fill="#f5f5f5" stroke="#aaa" stroke-width="1.2"/>
+  <text x="90" y="86"  text-anchor="middle" font-weight="600" fill="#111">x_{i,j}</text>
+  <text x="90" y="103" text-anchor="middle" font-size="11" fill="#555">Cell images</text>
+  <text x="90" y="119" text-anchor="middle" font-size="10" fill="#888">(n_cells, 28, 28, 1)</text>
+
+  <rect x="20" y="175" width="140" height="60" rx="8" fill="#f5f5f5" stroke="#aaa" stroke-width="1.2"/>
+  <text x="90" y="200" text-anchor="middle" font-weight="600" fill="#111">d</text>
+  <text x="90" y="217" text-anchor="middle" font-size="11" fill="#555">Digit constants {0…n-1}</text>
+
+  <rect x="20" y="275" width="140" height="70" rx="8" fill="#f5f5f5" stroke="#aaa" stroke-width="1.2"/>
+  <text x="90" y="300" text-anchor="middle" font-weight="600" fill="#111">se</text>
+  <text x="90" y="317" text-anchor="middle" font-size="11" fill="#555">Sub-elements</text>
+  <text x="90" y="333" text-anchor="middle" font-size="10" fill="#888">rows / cols / blocks</text>
+
+  <rect x="20" y="385" width="140" height="70" rx="8" fill="#f5f5f5" stroke="#aaa" stroke-width="1.2"/>
+  <text x="90" y="410" text-anchor="middle" font-weight="600" fill="#111">S⁺ / S⁻</text>
+  <text x="90" y="427" text-anchor="middle" font-size="11" fill="#555">Valid / Invalid puzzles</text>
+  <text x="90" y="443" text-anchor="middle" font-size="10" fill="#888">puzzle_label = 1 / 0</text>
+
+  <!-- COLUMN 2 — LTN Grounding -->
+  <text x="315" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#888">LTN GROUNDING</text>
+
+  <rect x="215" y="48" width="200" height="130" rx="8" fill="#e8f0fe" stroke="#5b8dee" stroke-width="1.5"/>
+  <text x="315" y="74"  text-anchor="middle" font-weight="700" font-size="13" fill="#2b5ece">digit(x_{i,j}, d)</text>
+  <text x="315" y="93"  text-anchor="middle" font-size="11" fill="#2b5ece">LTN grounding function</text>
+  <text x="315" y="112" text-anchor="middle" font-size="11" fill="#2b5ece">Conv → Conv → Dense(n)</text>
+  <text x="315" y="130" text-anchor="middle" font-size="11" fill="#2b5ece">→ softmax[d]  ∈ [0,1]</text>
+  <rect x="242" y="144" width="146" height="22" rx="4" fill="#5b8dee"/>
+  <text x="315" y="159" text-anchor="middle" font-size="10" font-weight="700" fill="white">trainable weights  θ_LTN</text>
+
+  <rect x="215" y="190" width="200" height="36" rx="6" fill="#f5f5f5" stroke="#bbb" stroke-width="1"/>
+  <text x="315" y="206" text-anchor="middle" font-size="10" fill="#666">≠ Part 1 CNN</text>
+  <text x="315" y="220" text-anchor="middle" font-size="10" fill="#666">trained from scratch via LTN loss</text>
+
+  <!-- COLUMN 3 — validElement predicate -->
+  <text x="560" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#888">PREDICATE</text>
+
+  <rect x="460" y="155" width="200" height="115" rx="8" fill="#e6f7ee" stroke="#3aaa6e" stroke-width="1.5"/>
+  <text x="560" y="182" text-anchor="middle" font-weight="700" fill="#1e7a4e">validElement(se)</text>
+  <text x="560" y="202" text-anchor="middle" font-size="11" fill="#1e7a4e">∀d ∃(i,j)∈se:</text>
+  <text x="560" y="220" text-anchor="middle" font-size="11" fill="#1e7a4e">  digit(x_{i,j}, d) is high</text>
+  <text x="560" y="242" text-anchor="middle" font-size="10" fill="#3aaa6e">no weights — derived from</text>
+  <text x="560" y="258" text-anchor="middle" font-size="10" fill="#3aaa6e">digit predictions + logic</text>
+
+  <!-- COLUMN 4 — Axioms + Loss -->
+  <text x="757" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#888">AXIOMS → LOSS</text>
+
+  <rect x="675" y="80"  width="165" height="90" rx="8" fill="#fff3e8" stroke="#e07b39" stroke-width="1.5"/>
+  <text x="757" y="103" text-anchor="middle" font-weight="700" fill="#b55a15">Axiom 1</text>
+  <text x="757" y="123" text-anchor="middle" font-size="11" fill="#b55a15">∀S⁺ ∀se:</text>
+  <text x="757" y="141" text-anchor="middle" font-size="11" fill="#b55a15">  validElement(se)</text>
+  <text x="757" y="160" text-anchor="middle" font-size="10" fill="#e07b39">must hold for every se</text>
+
+  <rect x="675" y="210" width="165" height="90" rx="8" fill="#fff3e8" stroke="#e07b39" stroke-width="1.5"/>
+  <text x="757" y="233" text-anchor="middle" font-weight="700" fill="#b55a15">Axiom 2</text>
+  <text x="757" y="253" text-anchor="middle" font-size="11" fill="#b55a15">∀S⁻ ∃se:</text>
+  <text x="757" y="271" text-anchor="middle" font-size="11" fill="#b55a15">  ¬validElement(se)</text>
+  <text x="757" y="290" text-anchor="middle" font-size="10" fill="#e07b39">at least one must fail</text>
+
+  <rect x="695" y="350" width="125" height="55" rx="8" fill="#fce8e8" stroke="#cc3333" stroke-width="1.5"/>
+  <text x="757" y="375" text-anchor="middle" font-weight="700" fill="#aa1111">Loss</text>
+  <text x="757" y="393" text-anchor="middle" font-size="11" fill="#aa1111">1 − sat(KB)</text>
+
+  <!-- Backprop -->
+  <path d="M695,378 Q580,500 315,490 Q260,488 260,180" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="6,3" fill="none" marker-end="url(#arr-red)"/>
+  <text x="430" y="512" text-anchor="middle" font-size="11" fill="#cc3333">∂Loss/∂θ_LTN  →  updates LTN grounding weights only</text>
+
+  <!-- Arrows -->
+  <line x1="160" y1="95"  x2="213" y2="95"  stroke="#5b8dee" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <line x1="160" y1="205" x2="213" y2="120" stroke="#5b8dee" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <line x1="415" y1="130" x2="458" y2="205" stroke="#3aaa6e" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <line x1="160" y1="310" x2="458" y2="237" stroke="#3aaa6e" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <line x1="660" y1="190" x2="673" y2="165" stroke="#e07b39" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <line x1="660" y1="225" x2="673" y2="250" stroke="#e07b39" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <line x1="160" y1="410" x2="673" y2="140" stroke="#e07b39" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr-orange)"/>
+  <line x1="160" y1="435" x2="673" y2="265" stroke="#e07b39" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr-orange)"/>
+  <line x1="757" y1="170" x2="757" y2="348" stroke="#cc3333" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <line x1="757" y1="300" x2="757" y2="348" stroke="#cc3333" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+  <!-- Legend -->
+  <rect x="20" y="478" width="400" height="90" rx="6" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="35" y="498" font-size="11" font-weight="600" fill="#666">Legend</text>
+  <rect x="35" y="508" width="12" height="12" rx="2" fill="#e8f0fe" stroke="#5b8dee"/>
+  <text x="52" y="519" font-size="11" fill="#111">Trainable — LTN grounding weights θ_LTN</text>
+  <rect x="35" y="528" width="12" height="12" rx="2" fill="#e6f7ee" stroke="#3aaa6e"/>
+  <text x="52" y="539" font-size="11" fill="#111">Derived predicate — no weights, pure logic</text>
+  <rect x="35" y="548" width="12" height="12" rx="2" fill="#fff3e8" stroke="#e07b39"/>
+  <text x="52" y="559" font-size="11" fill="#111">Axiom (logic constraint)</text>
+  <line x1="200" y1="554" x2="220" y2="554" stroke="#e07b39" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="225" y="558" font-size="11" fill="#111">conditioned on S⁺/S⁻</text>
+</svg>

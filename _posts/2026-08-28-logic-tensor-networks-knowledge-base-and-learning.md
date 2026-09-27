@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Logic Tensor Networks: knowledge base and learning"
+title: "Part 3: Logic Tensor Networks: knowledge base and learning"
 date: 2026-08-28 09:00:00+0100
 description: The third LTN tutorial — building a complete knowledge base and training a semi-supervised classifier that labels 19 points from just two labels and one rule.
 tags: neuro-symbolic-ai logic-tensor-networks jupyter machine-learning
