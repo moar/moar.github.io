@@ -72,9 +72,20 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-logic-tensor-networks-knowledge-base-and-learning",
+            },{id: "post-visual-sudoku-pure-deep-learning-vs-a-neuro-symbolic-approach",
         
-          title: "Logic Tensor Networks: knowledge base and learning",
+          title: "Visual Sudoku: pure deep learning vs a neuro-symbolic approach",
+        
+        description: "Reproducing the ViSudo-PC benchmark two ways — a purely CNN-based classifier vs a Logic Tensor Network that learns digits from puzzle-validity labels alone — and comparing what each one buys you.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/visual-sudoku-deep-learning-vs-neurosymbolic/";
+          
+        },
+      },{id: "post-part-3-logic-tensor-networks-knowledge-base-and-learning",
+        
+          title: "Part 3: Logic Tensor Networks: knowledge base and learning",
         
         description: "The third LTN tutorial — building a complete knowledge base and training a semi-supervised classifier that labels 19 points from just two labels and one rule.",
         section: "Posts",
@@ -83,9 +94,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/logic-tensor-networks-knowledge-base-and-learning/";
           
         },
-      },{id: "post-logic-tensor-networks-grounding-and-variables",
+      },{id: "post-part-2-logic-tensor-networks-grounding-and-variables",
         
-          title: "Logic Tensor Networks: grounding and variables",
+          title: "Part 2: Logic Tensor Networks: grounding and variables",
         
         description: "The second LTN tutorial — how constants, variables, predicates and functions become tensors, and why variable broadcasting is the key to writing your own axioms.",
         section: "Posts",
@@ -94,9 +105,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/logic-tensor-networks-grounding-and-variables/";
           
         },
-      },{id: "post-logic-tensor-networks-the-smokes-friends-cancer-example",
+      },{id: "post-part-1-logic-tensor-networks-the-smokes-friends-cancer-example",
         
-          title: "Logic Tensor Networks: the Smokes–Friends–Cancer example",
+          title: "Part 1: Logic Tensor Networks: the Smokes–Friends–Cancer example",
         
         description: "A hands-on walkthrough of the canonical Logic Tensor Networks example, showing how first-order logic axioms become a differentiable, trainable neural model.",
         section: "Posts",
